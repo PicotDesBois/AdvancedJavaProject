@@ -2,7 +2,7 @@ package com.example.advancedjavaproject.Model;
 
 import java.util.ArrayList;
 
-abstract public class Customer {
+ public class Customer {
 
     // Attribute
     protected String m_CuName;
