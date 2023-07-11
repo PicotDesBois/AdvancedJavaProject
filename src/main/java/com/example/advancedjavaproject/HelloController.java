@@ -1,6 +1,6 @@
 package com.example.advancedjavaproject;
 
-import com.example.advancedjavaproject.View.Payment;
+import com.example.advancedjavaproject.Controller.Payment;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +23,8 @@ public class HelloController {
     @FXML
     protected void onHelloButtonClick(Event event) throws IOException {
         welcomeText.setText("Welcome to JavaFX Application!");
+
+        /// A mettre dans le programme qui appelle payment ///
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Payment.fxml"));
         root =  fxmlLoader.load();
         Payment payment = fxmlLoader.getController();
@@ -30,5 +32,6 @@ public class HelloController {
         scene =  new Scene(root);
         lstage.setScene(scene);
         lstage.show();
+
     }
 }

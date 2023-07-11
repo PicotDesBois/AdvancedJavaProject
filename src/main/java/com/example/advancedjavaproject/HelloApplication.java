@@ -1,5 +1,6 @@
 package com.example.advancedjavaproject;
 
+import com.example.advancedjavaproject.Model.Bank;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,8 +16,6 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-        System.out.println("Bonjour je suis le main");
-
     }
 
     public static void main(String[] args) {

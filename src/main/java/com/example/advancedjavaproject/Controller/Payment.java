@@ -1,10 +1,14 @@
-package com.example.advancedjavaproject.View;
+package com.example.advancedjavaproject.Controller;
 
+import com.example.advancedjavaproject.Model.Bank;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.util.StringConverter;
+
+import java.time.LocalDate;
 
 public class Payment {
     @FXML
@@ -21,9 +25,10 @@ public class Payment {
 
     @FXML
     void OnClick(ActionEvent event) {
-        System.out.println(txtDate.getConverter());
-        System.out.println(txtName.getText());
-        System.out.println(txtNumber.getText());
-        System.out.println(txtPass.getText());
+
+        Bank card = new Bank(txtNumber.getText(),txtName.getText(),txtDate.getValue(),txtPass.getText());
+
+        card.setDatabase();
+        card.getDataBase();
     }
 }
