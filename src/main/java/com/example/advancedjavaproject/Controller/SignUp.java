@@ -85,9 +85,6 @@ public class SignUp {
             Password password = new Password(txtemail.getText(),txtPassword.getText());
             Member member = new Member(txtName.getText(),txtSurname.getText(),password);
 
-            /*
-            password.savePassword();
-            member.saveMember();*/
             member.saveDatabse();
         }
 

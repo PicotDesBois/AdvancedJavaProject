@@ -84,7 +84,6 @@ public class Member extends Customer{
     {
         m_password.savePassword();
         int id=saveMember();
-        System.out.println("Test");
         try {
             // Établir la connexion à la base de données
             String url = "jdbc:mysql://localhost:3306/mydb";
@@ -95,7 +94,8 @@ public class Member extends Customer{
 
 
             // Écrire la requête SQL pour l'insertion en utilisant les variables échappées
-            String query = "INSERT INTO `member` (`PaPassword_email`, `Customer_idCustomer`) VALUES"+ "("+m_password.getM_email()+","+id+")";
+            String query = "INSERT INTO `member` (`PaPassword_email`, `Customer_idCustomer`) VALUES ('" + m_password.getM_email() + "', " + id + ")";
+
 
 
             // Exécuter la requête SQL

@@ -105,8 +105,7 @@ public class Password {
 
 
             // Écrire la requête SQL pour l'insertion en utilisant les variables échappées
-            String query = "INSERT INTO `password` (`email`, `PaSecretCode`) VALUES"+ "("+m_email+","+m_password+")";
-            //String query = "INSERT INTO `password` (`email`, `PaSecretCode`) VALUES ('fdbnsq', '&é')";
+            String query = "INSERT INTO `password` (`email`, `PaSecretCode`) VALUES ('" + m_email + "', '" + m_password + "')";
 
             // Exécuter la requête SQL
             statement.executeUpdate(query);

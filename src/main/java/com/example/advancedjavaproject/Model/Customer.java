@@ -38,11 +38,11 @@ import java.util.ArrayList;
              while (rs.next())
              {
                  number++;
-                 System.out.println(number);
              }
 
              // Écrire la requête SQL pour l'insertion en utilisant les variables échappées
-             String query = "INSERT INTO `customer` (`idCustomer`,`CuName`, `CuSurname`) VALUES"+ "("+number+","+m_CuName+","+m_CuSurname+")";
+             String query = "INSERT INTO `customer` (`idCustomer`, `CuName`, `CuSurname`) VALUES (" + number + ", '" + m_CuName + "', '" + m_CuSurname + "')";
+
 
 
              // Exécuter la requête SQL
