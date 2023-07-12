@@ -17,6 +17,12 @@ public class Member extends Customer{
         m_CuSurname=surname;*/
         m_password=password;
     }
+    public Member(String name,String surname,Password password)
+    {
+        m_CuName=name;
+        m_CuSurname=surname;
+        m_password=password;
+    }
 
     /*
         return true if the account is a member account
@@ -71,6 +77,36 @@ public class Member extends Customer{
             con.close();
         } catch (Exception e1) {
             System.out.println(e1);
+        }
+    }
+
+    public void saveDatabse()
+    {
+        m_password.savePassword();
+        int id=saveMember();
+        try {
+            // Établir la connexion à la base de données
+            String url = "jdbc:mysql://localhost:3306/movies_project";
+            Connection connection = DriverManager.getConnection(url, "root", "");
+
+            // Créer un objet Statement
+            Statement statement = connection.createStatement();
+
+
+            // Écrire la requête SQL pour l'insertion en utilisant les variables échappées
+            String query = "INSERT INTO `member` (`PaPassword_email`, `Customer_idCustomer`) VALUES"+ "("+m_password.getM_email()+","+id+")";
+
+
+            // Exécuter la requête SQL
+            statement.executeUpdate(query);
+
+            // Fermer les ressources
+            statement.close();
+            connection.close();
+
+            System.out.println("Données insérées avec succès !");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

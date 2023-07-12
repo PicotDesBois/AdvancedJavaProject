@@ -1,17 +1,29 @@
 package com.example.advancedjavaproject.Controller;
 
+import com.example.advancedjavaproject.Controller.SignUp;
+import com.example.advancedjavaproject.HelloApplication;
 import com.example.advancedjavaproject.Model.Employees;
 import com.example.advancedjavaproject.Model.Member;
 import com.example.advancedjavaproject.Model.Password;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Login {
 
+    private Stage lstage;
+    private Scene scene;
+    private Parent root;
     @FXML
     private TextField txtEmail;
 
@@ -51,9 +63,16 @@ public class Login {
     }
 
     @FXML
-    void clickSignUp(MouseEvent event) {
-        System.out.println("Sign up !!!");
-        // Ici il faut mettre la page d'inscription
+    void clickSignUp(MouseEvent event) throws IOException {
+
+        /// A mettre dans le programme qui appelle Sign up ///
+        FXMLLoader fxmlLoaderSignUp = new FXMLLoader(HelloApplication.class.getResource("SignUp.fxml"));
+        root =  fxmlLoaderSignUp.load();
+        SignUp login = fxmlLoaderSignUp.getController();
+        lstage = (Stage)((Node)(event.getSource())).getScene().getWindow();
+        scene =  new Scene(root);
+        lstage.setScene(scene);
+        lstage.show();
     }
 
 }

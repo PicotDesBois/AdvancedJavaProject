@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.advancedjavaproject.Controller.SignUp">
+   <children>
+      <Label layoutX="259.0" layoutY="30.0" text="Sign up">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="89.0" text="Name" />
+      <Label layoutX="53.0" layoutY="148.0" text="Surname" />
+      <Label layoutX="55.0" layoutY="209.0" text="email" />
+      <Label layoutX="52.0" layoutY="263.0" text="Password" />
+      <TextField fx:id="txtName" layoutX="53.0" layoutY="115.0" prefHeight="25.0" prefWidth="264.0" promptText="Mathew" />
+      <TextField fx:id="txtSurname" layoutX="53.0" layoutY="175.0" prefHeight="25.0" prefWidth="264.0" promptText="Sheedy" />
+      <TextField fx:id="txtemail" layoutX="53.0" layoutY="227.0" prefHeight="25.0" prefWidth="264.0" promptText="mathew.sheedy@newman.com" />
+      <PasswordField fx:id="txtPassword" layoutX="53.0" layoutY="288.0" promptText="123" />
+      <Button layoutX="274.0" layoutY="326.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Label fx:id="txtEmailError" layoutX="88.0" layoutY="209.0" prefHeight="17.0" prefWidth="227.0" textFill="RED" />
+      <Label fx:id="txtNameError" layoutX="88.0" layoutY="89.0" prefHeight="17.0" prefWidth="227.0" textFill="RED" />
+      <Label fx:id="txtSurnameError" layoutX="102.0" layoutY="148.0" prefHeight="17.0" prefWidth="227.0" textFill="RED" />
+      <Label fx:id="txtPasswordError" layoutX="112.0" layoutY="263.0" prefHeight="17.0" prefWidth="227.0" textFill="RED" />
+   </children>
+</AnchorPane>
