@@ -85,10 +85,10 @@ public class SignUp {
             Password password = new Password(txtemail.getText(),txtPassword.getText());
             Member member = new Member(txtName.getText(),txtSurname.getText(),password);
 
+            /*
             password.savePassword();
-            System.out.println("Test");
-            member.saveMember();
-            //member.saveDatabse();
+            member.saveMember();*/
+            member.saveDatabse();
         }
 
     }

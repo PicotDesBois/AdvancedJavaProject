@@ -84,9 +84,10 @@ public class Member extends Customer{
     {
         m_password.savePassword();
         int id=saveMember();
+        System.out.println("Test");
         try {
             // Établir la connexion à la base de données
-            String url = "jdbc:mysql://localhost:3306/movies_project";
+            String url = "jdbc:mysql://localhost:3306/mydb";
             Connection connection = DriverManager.getConnection(url, "root", "");
 
             // Créer un objet Statement
