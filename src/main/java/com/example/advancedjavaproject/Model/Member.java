@@ -18,6 +18,10 @@ public class Member extends Customer{
         m_password=password;
     }
 
+    /*
+        return true if the account is a member account
+
+     */
     public boolean getDatabase()
     {
         boolean find = false;
@@ -44,6 +48,9 @@ public class Member extends Customer{
         return find;
     }
 
+    /*
+        load the account with the corresponding ID account
+     */
     public void getAccount(int idCustomer)
     {
         try {

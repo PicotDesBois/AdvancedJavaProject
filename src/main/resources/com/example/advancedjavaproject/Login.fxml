@@ -7,9 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.advancedjavaproject.Controller.Login">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advancedjavaproject.Controller.Login">
    <children>
       <TextField fx:id="txtEmail" layoutX="225.0" layoutY="121.0" promptText="email@example.com" />
       <PasswordField fx:id="txtPassword" layoutX="225.0" layoutY="210.0" promptText="123" />
@@ -21,6 +19,7 @@
          </font>
       </Label>
       <Button layoutX="274.0" layoutY="282.0" mnemonicParsing="false" onAction="#OnClick" text="Submit" />
-      <Label layoutX="215.0" layoutY="334.0" text="You don't have account Sign UP" />
+      <Label fx:id="txtSignup" layoutX="215.0" layoutY="334.0" onMouseReleased="#clickSignUp" text="You don't have account Sign up" />
+      <Label fx:id="txtError" layoutX="225.0" layoutY="250.0" prefHeight="17.0" prefWidth="149.0" textFill="RED" />
    </children>
 </AnchorPane>

@@ -18,7 +18,11 @@ public class Password {
         m_password=password;
     }
 
-    // Read database //
+    /*
+     Read database
+
+        return true if email and password are correct
+     */
     public boolean getDataBase()
     {
         boolean find=false;
