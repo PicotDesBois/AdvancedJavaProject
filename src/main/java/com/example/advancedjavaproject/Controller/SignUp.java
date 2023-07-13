@@ -4,6 +4,7 @@ import com.example.advancedjavaproject.HelloApplication;
 import com.example.advancedjavaproject.Model.Member;
 import com.example.advancedjavaproject.Model.Password;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -42,8 +43,12 @@ public class SignUp {
     @FXML
     private TextField txtemail;
 
+    private Stage lstage;
+    private Scene scene;
+    private Parent root;
+
     @FXML
-    void submit(ActionEvent event){
+    void submit(ActionEvent event) throws IOException {
         boolean validate=false;
         if(txtName.getText().equals(""))
             txtNameError.setText("wrong name");
@@ -84,10 +89,20 @@ public class SignUp {
         {
             Password password = new Password(txtemail.getText(),txtPassword.getText());
             Member member = new Member(txtName.getText(),txtSurname.getText(),password);
-
             member.saveDatabse();
+            loadLogin(event);
         }
-
     }
-
+    public void loadLogin(Event event) throws IOException {
+        /// A mettre dans le programme qui appelle Login ///
+        FXMLLoader fxmlLoaderLogin = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
+        root =  fxmlLoaderLogin.load();
+        Login login = fxmlLoaderLogin.getController();
+        lstage = (Stage)((Node)(event.getSource())).getScene().getWindow();
+        scene =  new Scene(root);
+        lstage.setScene(scene);
+        lstage.show();
+    }
 }
+
+
