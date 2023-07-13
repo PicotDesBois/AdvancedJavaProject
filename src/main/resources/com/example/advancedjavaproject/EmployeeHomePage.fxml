@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advancedjavaproject.Controller.EmployeeHomePage">
+   <top>
+      <AnchorPane prefHeight="93.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="txtTitle" layoutX="254.0" layoutY="14.0" prefHeight="17.0" prefWidth="91.0" text="Hello" textAlignment="CENTER" />
+            <Button layoutX="25.0" layoutY="39.0" mnemonicParsing="false" onAction="#addMovie" prefHeight="46.0" prefWidth="98.0" text="Add movie" />
+            <Button layoutX="143.0" layoutY="39.0" mnemonicParsing="false" onAction="#removeMovie" prefHeight="46.0" prefWidth="98.0" text="Remove movie" />
+            <Button layoutX="296.0" layoutY="39.0" mnemonicParsing="false" onAction="#addMovieShow" prefHeight="46.0" prefWidth="119.0" text="Add movie show" />
+            <Button layoutX="441.0" layoutY="39.0" mnemonicParsing="false" onAction="#removeMovieShow" prefHeight="46.0" prefWidth="132.0" text="Remove movie show" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
